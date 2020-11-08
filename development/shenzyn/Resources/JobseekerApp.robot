@@ -1,14 +1,20 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../Resources/PO/LandingPage.robot
+Resource    ../Resources/PO/LoginDetails.robot
 
 *** Keywords ***
+Verify Landing Page
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
+    LandingPage.Validate the PageObjects
+
 Login to jobseeker portal
-    go to     http://js.stage.shenzyn.com/
-    #wait for react
-    MAXIMIZE BROWSER WINDOW
-    wait until page contains    Wear your superwoman cape and fly high
-    input text    xpath=//input[@id='emailId']  saravjeet.singh@hotmail.com
-    input text    xpath=//input[@id='password']  s33rat@123
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
+    #LandingPage.Validate the PageObjects
+    LoginDetails.LoginID
+    LoginDetails.LoginPassword
     click element    //span[contains(text(),'Remember me')]
     click button    //button[@class='ant-btn btn-cta btn-block ant-btn-primary']
 
@@ -16,6 +22,7 @@ Update Profile
     wait until page contains element    //span[contains(text(),'Recommended Jobs')]
     click element    //div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]
     wait until page contains    Update Profile
+    sleep    2s
     click element    //li//li[1]//a[1]
 
 Update Personal Details
@@ -85,5 +92,30 @@ Update Project Details
     input text    //textarea[@id='projectDescription-0']    Selenium Testing
 
     click button    //div[@class='steps-action']/button[2]
+
+Update Skills
+    sleep    5s
+    clear element text    //input[@id='skillName-0']
+    input text    //input[@id='skillName-0']    Cloud Computing
+    click element    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
+    click element    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
+    clear element text    //input[@id='skillName-0']
+    input text    //input[@id='skillName-0']    Hindi, English, Punjabi
+    clear element text    //textarea[@id='briefBio']
+    input text    //textarea[@id='briefBio']    Testing Bio field.
+
+    click element    //div[1]/div[1]/section[1]/article[1]/div[3]/button[2]
+
+Update Preferences
+    wait until page contains    Company Size
+    click element    //div[1]/div[1]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]
+    sleep    1s
+    click element    //li[contains(text(),'Startups (1-100)')]
+    clear element text    //div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/input[1]
+    input text    //div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/input[1]    10
+    click element    //tbody/div[2]/div[3]/span[1]
+    click element    //tbody/div[3]/div[2]/span[1]/span[1]/img[1]
+    click element    //div[1]/section[1]/article[1]/div[3]/button[2]
+
 
 
