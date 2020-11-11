@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Jobseeker Automation Test suite
 Library    SeleniumLibrary
+Library    ImapLibrary
 
 *** Variables ***
 
@@ -8,26 +9,26 @@ Library    SeleniumLibrary
 User should be able to Create the Account
     [Documentation]    User should be able to create and verify the account
     [Tags]    Smoke
-#   Account Creation
-    open browser    http://js.stage.shenzyn.com/  chrome
-    Wait Until Page Contains    Wear your superwoman cape and fly high
-    MAXIMIZE BROWSER WINDOW
-    click element    xpath=//a[contains(text(),'Sign up')]
-    wait until page contains    Wait Not, Procrastinate Not, Just Start
-    input text    xpath=//input[@id='name']    Seerat Chaggar
-    input text    xpath=//input[@id='emailId']    seerat.chaggar@hotmail.com
-    input text    xpath=//input[@id='password']    s33rat@123
-    input text    xpath=//input[@id='password-confirm']    s33rat@123
-    click element    xpath=//input[@id='signup-agreement']
-    click button    xpath=//button
 #   Account Verification
     open browser    https://outlook.live.com/owa/  chrome
-    click element    linktext=Sign in
+    MAXIMIZE BROWSER WINDOW
+    click element    xpath=//header/div[1]/aside[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]
     input text    xpath=//input[@id='i0116']    seerat.chaggar@hotmail.com
-    click element    tagname=input
-    input text    tagname=input    s33rat@123
-    sleep    5s
-    close browser
+    sleep    3s
+    click element    xpath=//input[@id='idSIButton9']
+    #wait until page contains    Use my Microsoft Authenticator app
+    sleep    3s
+    input text    xpath=//input[@id='i0118']    s33rat@123
+    click element    css=#idSIButton9
+    sleep    2s
+    click element    css=#idSIButton9
+    sleep    3s
+    page should contain    Account Verification Token
+    sleep    3s
+    clear element text    Inbox
+    click element    xpath=//*[@id="app"]/div/div/div/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[3]/div/div/div/table/tbody/tr[3]/td/p[1]/a
+
+#    close browser
 
 *** Keywords ***
 

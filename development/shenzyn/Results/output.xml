@@ -1,0 +1,2205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201111 15:45:18.382" rpa="false">
+<suite id="s1" name="Jobseeker" source="D:\robotframework\Shenzyn-Test-Aut\development\shenzyn\tests\jobseeker.robot">
+<test id="s1-t1" name="Validate landing page">
+<kw name="Begin Web Test" library="CommonApp" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 15:45:18.976" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201111 15:45:18.976" endtime="20201111 15:45:22.476"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:18.975" endtime="20201111 15:45:22.476"></status>
+</kw>
+<kw name="Verify Landing Page" library="JobseekerApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20201111 15:45:22.480" level="INFO">Opening url 'http://js.stage.shenzyn.com/'</msg>
+<status status="PASS" starttime="20201111 15:45:22.480" endtime="20201111 15:45:47.987"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:22.479" endtime="20201111 15:45:47.988"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 15:45:47.989" endtime="20201111 15:45:50.133"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Wear your superwoman cape and fly high</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.134" endtime="20201111 15:45:50.155"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Fasten your seat belt for a thrilling and successful career ride.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.155" endtime="20201111 15:45:50.172"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>By logging using 3rd party medium, I agree the</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.174" endtime="20201111 15:45:50.203"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Don't have an account yet? Sign up</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.203" endtime="20201111 15:45:50.223"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Forgot your username or password? Reset password</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.224" endtime="20201111 15:45:50.248"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Remember me</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:45:50.248" endtime="20201111 15:45:50.264"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:47.988" endtime="20201111 15:45:50.265"></status>
+</kw>
+<kw name="Validate the PageObjects" library="LandingPage">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//h1[contains(text(),'Wear your superwoman cape and fly high')]</arg>
+<arg>Wear your superwoman cape and fly high</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.266" level="INFO">Verifying element '//h1[contains(text(),'Wear your superwoman cape and fly high')]' contains exact text 'Wear your superwoman cape and fly high'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.265" endtime="20201111 15:45:50.299"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//p[contains(text(),'Fasten your seat belt for a thrilling and successf')]</arg>
+<arg>Fasten your seat belt for a thrilling and successful career ride.</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.300" level="INFO">Verifying element '//p[contains(text(),'Fasten your seat belt for a thrilling and successf')]' contains exact text 'Fasten your seat belt for a thrilling and successful career ride.'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.300" endtime="20201111 15:45:50.326"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[2]/section[1]/p[2]</arg>
+<arg>By logging using 3rd party medium, I agree the Terms and Conditions</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.327" level="INFO">Verifying element '//div[2]/section[1]/p[2]' contains exact text 'By logging using 3rd party medium, I agree the Terms and Conditions'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.327" endtime="20201111 15:45:50.360"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[2]/section[1]/p[3]</arg>
+<arg>Don't have an account yet? Sign up</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.360" level="INFO">Verifying element '//div[2]/section[1]/p[3]' contains exact text 'Don't have an account yet? Sign up'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.360" endtime="20201111 15:45:50.388"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[2]/section[1]/p[4]</arg>
+<arg>Forgot your username or password? Reset password</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.389" level="INFO">Verifying element '//div[2]/section[1]/p[4]' contains exact text 'Forgot your username or password? Reset password'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.389" endtime="20201111 15:45:50.419"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Remember me')]</arg>
+<arg>Remember me</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.420" level="INFO">Verifying element '//span[contains(text(),'Remember me')]' contains exact text 'Remember me'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.419" endtime="20201111 15:45:50.451"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//input[@id='emailId']</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.491" level="INFO">Current page contains text field '//input[@id='emailId']'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.452" endtime="20201111 15:45:50.491"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//input[@id='password']</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.530" level="INFO">Current page contains text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.491" endtime="20201111 15:45:50.531"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//a[contains(text(),'Terms and Conditions')]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.559" level="INFO">Current page contains link '//a[contains(text(),'Terms and Conditions')]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.531" endtime="20201111 15:45:50.559"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//a[contains(text(),'Sign up')]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.581" level="INFO">Current page contains link '//a[contains(text(),'Sign up')]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.559" endtime="20201111 15:45:50.582"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//a[contains(text(),'Reset password')]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.606" level="INFO">Current page contains link '//a[contains(text(),'Reset password')]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.582" endtime="20201111 15:45:50.606"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//span[contains(text(),'Login with Gmail')]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.626" level="INFO">Current page contains element '//span[contains(text(),'Login with Gmail')]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.607" endtime="20201111 15:45:50.626"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//span[contains(text(),'Login with LinkedIN')]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.645" level="INFO">Current page contains element '//span[contains(text(),'Login with LinkedIN')]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.627" endtime="20201111 15:45:50.646"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//div[4]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.661" level="INFO">Current page contains element '//div[4]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.646" endtime="20201111 15:45:50.662"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>Shenzyn</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.683" level="INFO">Current page contains image 'Shenzyn'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.662" endtime="20201111 15:45:50.684"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>https://www.shenzyn.com/</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.708" level="INFO">Current page contains link 'https://www.shenzyn.com/'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.684" endtime="20201111 15:45:50.709"></status>
+</kw>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<arguments>
+<arg>//input[@id='login2-remember']</arg>
+</arguments>
+<msg timestamp="20201111 15:45:50.740" level="INFO">Current page contains checkbox '//input[@id='login2-remember']'.</msg>
+<status status="PASS" starttime="20201111 15:45:50.709" endtime="20201111 15:45:50.740"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:50.265" endtime="20201111 15:45:50.740"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:22.478" endtime="20201111 15:45:50.740"></status>
+</kw>
+<kw name="End Web Test" library="CommonApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 15:45:50.742" endtime="20201111 15:45:53.010"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:50.741" endtime="20201111 15:45:53.011"></status>
+</kw>
+<doc>This test will verify if the objects or links present and working on the jobseeker landing page</doc>
+<tags>
+<tag>Test Case 1: Validate JS Landing Page</tag>
+</tags>
+<status status="PASS" starttime="20201111 15:45:18.973" endtime="20201111 15:45:53.011" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Validate Login Functionality">
+<kw name="Begin Web Test" library="CommonApp" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 15:45:53.018" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201111 15:45:53.017" endtime="20201111 15:45:56.523"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:53.016" endtime="20201111 15:45:56.524"></status>
+</kw>
+<kw name="Login to jobseeker portal" library="JobseekerApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20201111 15:45:56.529" level="INFO">Opening url 'http://js.stage.shenzyn.com/'</msg>
+<status status="PASS" starttime="20201111 15:45:56.529" endtime="20201111 15:46:03.985"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:56.527" endtime="20201111 15:46:03.985"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 15:46:03.987" endtime="20201111 15:46:06.157"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Wear your superwoman cape and fly high</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.158" endtime="20201111 15:46:06.178"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Fasten your seat belt for a thrilling and successful career ride.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.178" endtime="20201111 15:46:06.202"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>By logging using 3rd party medium, I agree the</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.202" endtime="20201111 15:46:06.229"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Don't have an account yet? Sign up</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.230" endtime="20201111 15:46:06.246"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Forgot your username or password? Reset password</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.246" endtime="20201111 15:46:06.259"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Remember me</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:06.261" endtime="20201111 15:46:06.272"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:03.986" endtime="20201111 15:46:06.272"></status>
+</kw>
+<kw name="LoginID" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='emailId']</arg>
+<arg>${LOGIN_ID}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:06.278" level="INFO">Typing text 'saravjeet.singh@hotmail.com' into text field 'xpath=//input[@id='emailId']'.</msg>
+<status status="PASS" starttime="20201111 15:46:06.277" endtime="20201111 15:46:06.624"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:06.274" endtime="20201111 15:46:06.624"></status>
+</kw>
+<kw name="LoginPassword" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='password']</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:06.626" level="INFO">Typing text 's33rat@123' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20201111 15:46:06.625" endtime="20201111 15:46:06.789"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:06.624" endtime="20201111 15:46:06.789"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Remember me')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:06.790" level="INFO">Clicking element '//span[contains(text(),'Remember me')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:06.789" endtime="20201111 15:46:06.863"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='ant-btn btn-cta btn-block ant-btn-primary']</arg>
+</arguments>
+<msg timestamp="20201111 15:46:06.864" level="INFO">Clicking button '//button[@class='ant-btn btn-cta btn-block ant-btn-primary']'.</msg>
+<status status="PASS" starttime="20201111 15:46:06.863" endtime="20201111 15:46:06.966"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:45:56.526" endtime="20201111 15:46:06.966"></status>
+</kw>
+<kw name="End Web Test" library="CommonApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 15:46:06.966" endtime="20201111 15:46:09.281"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:06.966" endtime="20201111 15:46:09.282"></status>
+</kw>
+<doc>This test will verify if the user is able to login to the Jobseeker portal</doc>
+<tags>
+<tag>Test Case 2: Validate JS Login Funcationality</tag>
+</tags>
+<status status="PASS" starttime="20201111 15:45:53.014" endtime="20201111 15:46:09.282" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Validate JobSeekerPage">
+<kw name="Begin Web Test" library="CommonApp" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:09.290" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201111 15:46:09.290" endtime="20201111 15:46:12.723"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:09.289" endtime="20201111 15:46:12.724"></status>
+</kw>
+<kw name="Login to jobseeker portal" library="JobseekerApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:12.729" level="INFO">Opening url 'http://js.stage.shenzyn.com/'</msg>
+<status status="PASS" starttime="20201111 15:46:12.728" endtime="20201111 15:46:20.333"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:12.727" endtime="20201111 15:46:20.334"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 15:46:20.335" endtime="20201111 15:46:22.474"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Wear your superwoman cape and fly high</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.475" endtime="20201111 15:46:22.513"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Fasten your seat belt for a thrilling and successful career ride.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.513" endtime="20201111 15:46:22.534"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>By logging using 3rd party medium, I agree the</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.534" endtime="20201111 15:46:22.559"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Don't have an account yet? Sign up</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.559" endtime="20201111 15:46:22.586"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Forgot your username or password? Reset password</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.587" endtime="20201111 15:46:22.610"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Remember me</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:22.611" endtime="20201111 15:46:22.630"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:20.334" endtime="20201111 15:46:22.630"></status>
+</kw>
+<kw name="LoginID" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='emailId']</arg>
+<arg>${LOGIN_ID}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:22.631" level="INFO">Typing text 'saravjeet.singh@hotmail.com' into text field 'xpath=//input[@id='emailId']'.</msg>
+<status status="PASS" starttime="20201111 15:46:22.631" endtime="20201111 15:46:22.919"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:22.631" endtime="20201111 15:46:22.919"></status>
+</kw>
+<kw name="LoginPassword" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='password']</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:22.922" level="INFO">Typing text 's33rat@123' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20201111 15:46:22.921" endtime="20201111 15:46:23.101"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:22.920" endtime="20201111 15:46:23.101"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Remember me')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:23.102" level="INFO">Clicking element '//span[contains(text(),'Remember me')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:23.102" endtime="20201111 15:46:23.172"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='ant-btn btn-cta btn-block ant-btn-primary']</arg>
+</arguments>
+<msg timestamp="20201111 15:46:23.173" level="INFO">Clicking button '//button[@class='ant-btn btn-cta btn-block ant-btn-primary']'.</msg>
+<status status="PASS" starttime="20201111 15:46:23.172" endtime="20201111 15:46:23.275"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:12.726" endtime="20201111 15:46:23.276"></status>
+</kw>
+<kw name="Validate JSPageObjects" library="JobseekerApp">
+<kw name="Verify JSPage Loaded" library="JobseekerPortalObjects">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 15:46:23.280" endtime="20201111 15:46:23.285"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:28.286" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:23.285" endtime="20201111 15:46:28.286"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:23.279" endtime="20201111 15:46:28.286"></status>
+</kw>
+<kw name="Validate the JSPageObjects" library="JobseekerPortalObjects">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.288" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:28.288" endtime="20201111 15:46:31.288"></status>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>Shenzyn</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.321" level="INFO">Current page contains image 'Shenzyn'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.288" endtime="20201111 15:46:31.321"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//div[1]/div[1]/ul[1]/li[1]/a[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.345" level="INFO">Current page contains element '//div[1]/div[1]/ul[1]/li[1]/a[1]'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.322" endtime="20201111 15:46:31.345"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Profile</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.375" level="INFO">Current page contains text 'Profile'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.346" endtime="20201111 15:46:31.376"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.404" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.376" endtime="20201111 15:46:31.405"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.435" level="INFO">Current page contains text 'Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.405" endtime="20201111 15:46:31.435"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Events</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.465" level="INFO">Current page contains text 'Events'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.436" endtime="20201111 15:46:31.465"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Trainings</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.494" level="INFO">Current page contains text 'Trainings'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.466" endtime="20201111 15:46:31.495"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Mentors</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.523" level="INFO">Current page contains text 'Mentors'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.495" endtime="20201111 15:46:31.523"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Recommended Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.554" level="INFO">Current page contains text 'Recommended Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.524" endtime="20201111 15:46:31.554"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Saved Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.585" level="INFO">Current page contains text 'Saved Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.555" endtime="20201111 15:46:31.585"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Applied Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.615" level="INFO">Current page contains text 'Applied Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.586" endtime="20201111 15:46:31.615"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Profile Views</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.644" level="INFO">Current page contains text 'Profile Views'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.615" endtime="20201111 15:46:31.644"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${USER_NAME}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.673" level="INFO">Current page contains text 'Saravjeet Chaggar'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.645" endtime="20201111 15:46:31.674"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:31.675" level="INFO">Clicking element '//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:31.674" endtime="20201111 15:46:31.830"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:33.833" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:31.831" endtime="20201111 15:46:33.833"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[1]/div[1]/ul[1]/li[1]/a[1]</arg>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20201111 15:46:33.834" level="INFO">Verifying element '//div[1]/div[1]/ul[1]/li[1]/a[1]' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20201111 15:46:33.833" endtime="20201111 15:46:33.881"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[3]/ul[1]/li[1]/a[1]</arg>
+<arg>Update Profile</arg>
+</arguments>
+<msg timestamp="20201111 15:46:33.882" level="INFO">Verifying element '//ul[1]/li[3]/ul[1]/li[1]/a[1]' contains exact text 'Update Profile'.</msg>
+<status status="PASS" starttime="20201111 15:46:33.882" endtime="20201111 15:46:33.939"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[3]/ul[1]/li[2]/a[1]</arg>
+<arg>Saved Profile</arg>
+</arguments>
+<msg timestamp="20201111 15:46:33.939" level="INFO">Verifying element '//ul[1]/li[3]/ul[1]/li[2]/a[1]' contains exact text 'Saved Profile'.</msg>
+<status status="PASS" starttime="20201111 15:46:33.939" endtime="20201111 15:46:33.992"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Jobs')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:33.993" level="INFO">Clicking element '//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Jobs')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:33.993" endtime="20201111 15:46:34.135"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:36.136" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:34.135" endtime="20201111 15:46:36.136"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[4]/ul[1]/li[1]/a[1]</arg>
+<arg>Saved/Applied Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:36.137" level="INFO">Verifying element '//ul[1]/li[4]/ul[1]/li[1]/a[1]' contains exact text 'Saved/Applied Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:36.137" endtime="20201111 15:46:36.187"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[4]/ul[1]/li[2]/a[1]</arg>
+<arg>Search Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:36.188" level="INFO">Verifying element '//ul[1]/li[4]/ul[1]/li[2]/a[1]' contains exact text 'Search Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:36.187" endtime="20201111 15:46:36.238"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[4]/ul[1]/li[3]/a[1]</arg>
+<arg>Recommended Jobs</arg>
+</arguments>
+<msg timestamp="20201111 15:46:36.238" level="INFO">Verifying element '//ul[1]/li[4]/ul[1]/li[3]/a[1]' contains exact text 'Recommended Jobs'.</msg>
+<status status="PASS" starttime="20201111 15:46:36.238" endtime="20201111 15:46:36.289"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text']/span[contains(text(),'Trainings')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:36.290" level="INFO">Clicking element '//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text']/span[contains(text(),'Trainings')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:36.290" endtime="20201111 15:46:36.452"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:38.454" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:36.453" endtime="20201111 15:46:38.454"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Invited Trainings')]</arg>
+<arg>Invited Trainings</arg>
+</arguments>
+<msg timestamp="20201111 15:46:38.455" level="INFO">Verifying element '//span[contains(text(),'Invited Trainings')]' contains exact text 'Invited Trainings'.</msg>
+<status status="PASS" starttime="20201111 15:46:38.455" endtime="20201111 15:46:38.505"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[1]/div[1]/ul[1]/li[6]/ul[1]/li[2]/a[1]</arg>
+<arg>Registered Trainings</arg>
+</arguments>
+<msg timestamp="20201111 15:46:38.506" level="INFO">Verifying element '//div[1]/div[1]/ul[1]/li[6]/ul[1]/li[2]/a[1]' contains exact text 'Registered Trainings'.</msg>
+<status status="PASS" starttime="20201111 15:46:38.505" endtime="20201111 15:46:38.557"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Mentors')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:38.558" level="INFO">Clicking element '//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Mentors')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:38.558" endtime="20201111 15:46:38.734"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:46:40.735" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:38.734" endtime="20201111 15:46:40.735"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[7]/ul[1]/li[1]/a[1]</arg>
+<arg>Find Mentor</arg>
+</arguments>
+<msg timestamp="20201111 15:46:40.736" level="INFO">Verifying element '//ul[1]/li[7]/ul[1]/li[1]/a[1]' contains exact text 'Find Mentor'.</msg>
+<status status="PASS" starttime="20201111 15:46:40.735" endtime="20201111 15:46:40.789"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//ul[1]/li[7]/ul[1]/li[2]/a[1]</arg>
+<arg>My Mentor</arg>
+</arguments>
+<msg timestamp="20201111 15:46:40.790" level="INFO">Verifying element '//ul[1]/li[7]/ul[1]/li[2]/a[1]' contains exact text 'My Mentor'.</msg>
+<status status="PASS" starttime="20201111 15:46:40.789" endtime="20201111 15:46:40.842"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:28.287" endtime="20201111 15:46:40.843"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:23.278" endtime="20201111 15:46:40.843"></status>
+</kw>
+<kw name="End Web Test" library="CommonApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 15:46:40.845" endtime="20201111 15:46:43.131"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:40.844" endtime="20201111 15:46:43.132"></status>
+</kw>
+<doc>This test will verify if all the objects are present on the jobseeker portal</doc>
+<tags>
+<tag>Test Case 3: Validate JS Page Objects</tag>
+</tags>
+<status status="PASS" starttime="20201111 15:46:09.287" endtime="20201111 15:46:43.132" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Validate updates on Profile">
+<kw name="Begin Web Test" library="CommonApp" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:43.139" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201111 15:46:43.138" endtime="20201111 15:46:46.630"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:43.137" endtime="20201111 15:46:46.631"></status>
+</kw>
+<kw name="Login to jobseeker portal" library="JobseekerApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:46.635" level="INFO">Opening url 'http://js.stage.shenzyn.com/'</msg>
+<status status="PASS" starttime="20201111 15:46:46.634" endtime="20201111 15:46:52.115"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:46.633" endtime="20201111 15:46:52.115"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201111 15:46:52.117" endtime="20201111 15:46:54.273"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Wear your superwoman cape and fly high</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.273" endtime="20201111 15:46:54.322"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Fasten your seat belt for a thrilling and successful career ride.</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.322" endtime="20201111 15:46:54.339"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>By logging using 3rd party medium, I agree the</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.340" endtime="20201111 15:46:54.355"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Don't have an account yet? Sign up</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.355" endtime="20201111 15:46:54.369"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Forgot your username or password? Reset password</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.369" endtime="20201111 15:46:54.386"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Remember me</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:46:54.387" endtime="20201111 15:46:54.403"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:52.116" endtime="20201111 15:46:54.404"></status>
+</kw>
+<kw name="LoginID" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='emailId']</arg>
+<arg>${LOGIN_ID}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:54.405" level="INFO">Typing text 'saravjeet.singh@hotmail.com' into text field 'xpath=//input[@id='emailId']'.</msg>
+<status status="PASS" starttime="20201111 15:46:54.405" endtime="20201111 15:46:54.781"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:54.404" endtime="20201111 15:46:54.782"></status>
+</kw>
+<kw name="LoginPassword" library="LoginDetails">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='password']</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201111 15:46:54.783" level="INFO">Typing text 's33rat@123' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20201111 15:46:54.782" endtime="20201111 15:46:54.955"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:54.782" endtime="20201111 15:46:54.955"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Remember me')]</arg>
+</arguments>
+<msg timestamp="20201111 15:46:54.956" level="INFO">Clicking element '//span[contains(text(),'Remember me')]'.</msg>
+<status status="PASS" starttime="20201111 15:46:54.956" endtime="20201111 15:46:55.044"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='ant-btn btn-cta btn-block ant-btn-primary']</arg>
+</arguments>
+<msg timestamp="20201111 15:46:55.045" level="INFO">Clicking button '//button[@class='ant-btn btn-cta btn-block ant-btn-primary']'.</msg>
+<status status="PASS" starttime="20201111 15:46:55.044" endtime="20201111 15:46:55.189"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:46.632" endtime="20201111 15:46:55.189"></status>
+</kw>
+<kw name="Update Profile" library="JobseekerApp">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:00.192" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:46:55.191" endtime="20201111 15:47:00.192"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//span[contains(text(),'Recommended Jobs')]</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:00.193" endtime="20201111 15:47:00.217"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:00.218" level="INFO">Clicking element '//div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]'.</msg>
+<status status="PASS" starttime="20201111 15:47:00.217" endtime="20201111 15:47:00.350"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Update Profile</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:00.351" endtime="20201111 15:47:00.393"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:02.395" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:00.393" endtime="20201111 15:47:02.395"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//li//li[1]//a[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:02.396" level="INFO">Clicking element '//li//li[1]//a[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:02.395" endtime="20201111 15:47:02.555"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:46:55.190" endtime="20201111 15:47:02.555"></status>
+</kw>
+<kw name="Update Personal Details" library="JobseekerApp">
+<kw name="Validate PageObjects" library="PersonalDetails">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Personal Details</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:02.557" endtime="20201111 15:47:05.369"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.371" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:05.370" endtime="20201111 15:47:10.371"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[contains(text(),'Personal Details')]</arg>
+<arg>Personal Details</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.374" level="INFO">Verifying element '//div[contains(text(),'Personal Details')]' contains exact text 'Personal Details'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.372" endtime="20201111 15:47:10.425"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Profile Picture')]</arg>
+<arg>Profile Picture</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.426" level="INFO">Verifying element '//span[contains(text(),'Profile Picture')]' contains exact text 'Profile Picture'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.426" endtime="20201111 15:47:10.474"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Video JD')]</arg>
+<arg>Video JD</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.475" level="INFO">Verifying element '//label[contains(text(),'Video JD')]' contains exact text 'Video JD'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.474" endtime="20201111 15:47:10.525"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'DOB')]</arg>
+<arg>DOB</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.526" level="INFO">Verifying element '//label[contains(text(),'DOB')]' contains exact text 'DOB'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.526" endtime="20201111 15:47:10.576"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Contact Number')]</arg>
+<arg>Contact Number</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.577" level="INFO">Verifying element '//label[contains(text(),'Contact Number')]' contains exact text 'Contact Number'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.576" endtime="20201111 15:47:10.624"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Current Location')]</arg>
+<arg>Current Location</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.625" level="INFO">Verifying element '//label[contains(text(),'Current Location')]' contains exact text 'Current Location'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.624" endtime="20201111 15:47:10.696"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Nationality')]</arg>
+<arg>Nationality</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.697" level="INFO">Verifying element '//label[contains(text(),'Nationality')]' contains exact text 'Nationality'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.697" endtime="20201111 15:47:10.746"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Linkedin Profile Url')]</arg>
+<arg>Linkedin Profile Url</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.747" level="INFO">Verifying element '//label[contains(text(),'Linkedin Profile Url')]' contains exact text 'Linkedin Profile Url'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.747" endtime="20201111 15:47:10.795"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Github Profile Url')]</arg>
+<arg>Github Profile Url</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.795" level="INFO">Verifying element '//label[contains(text(),'Github Profile Url')]' contains exact text 'Github Profile Url'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.795" endtime="20201111 15:47:10.844"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//span[contains(text(),'Validate')]</arg>
+<arg>Validate</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.845" level="INFO">Verifying element '//span[contains(text(),'Validate')]' contains exact text 'Validate'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.844" endtime="20201111 15:47:10.893"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//p[contains(text(),'Drag or Click to Upload')]</arg>
+<arg>Drag or Click to Upload</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.893" level="INFO">Verifying element '//p[contains(text(),'Drag or Click to Upload')]' contains exact text 'Drag or Click to Upload'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.893" endtime="20201111 15:47:10.942"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//div[5]/div[2]/div[1]/span[1]/div[1]/button[@class='ant-btn ant-btn-primary']</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.965" level="INFO">Current page contains element '//div[5]/div[2]/div[1]/span[1]/div[1]/button[@class='ant-btn ant-btn-primary']'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.943" endtime="20201111 15:47:10.965"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//section[1]/article[1]/div[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:10.988" level="INFO">Current page contains element '//section[1]/article[1]/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:10.966" endtime="20201111 15:47:10.989"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:02.557" endtime="20201111 15:47:10.989"></status>
+</kw>
+<kw name="Image Upload" library="PersonalDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:12.992" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:10.990" endtime="20201111 15:47:12.992"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:12.993" level="INFO">Clicking element '//div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:12.993" endtime="20201111 15:47:13.147"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:16.147" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:13.147" endtime="20201111 15:47:16.147"></status>
+</kw>
+<kw name="Typewrite" library="pyautogui">
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.</doc>
+<arguments>
+<arg>${IMAGE_FILE_PATH}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:16.148" endtime="20201111 15:47:16.389"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:19.393" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:16.389" endtime="20201111 15:47:19.394"></status>
+</kw>
+<kw name="Press Combination" library="ImageHorizonLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>Key.enter</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:19.394" endtime="20201111 15:47:19.532"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:24.533" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:19.533" endtime="20201111 15:47:24.533"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:10.989" endtime="20201111 15:47:24.533"></status>
+</kw>
+<kw name="Resume Upload" library="PersonalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:24.535" level="INFO">Clicking element '//div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:24.535" endtime="20201111 15:47:24.649"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:26.651" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:24.650" endtime="20201111 15:47:26.651"></status>
+</kw>
+<kw name="Typewrite" library="pyautogui">
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.</doc>
+<arguments>
+<arg>${RESUME}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:26.652" endtime="20201111 15:47:26.864"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:29.866" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:26.864" endtime="20201111 15:47:29.866"></status>
+</kw>
+<kw name="Press Combination" library="ImageHorizonLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>Key.enter</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:29.867" endtime="20201111 15:47:29.974"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:34.985" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:29.981" endtime="20201111 15:47:34.985"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:24.534" endtime="20201111 15:47:34.986"></status>
+</kw>
+<kw name="Video JD Upload" library="PersonalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:34.988" level="INFO">Clicking element '//div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:34.987" endtime="20201111 15:47:35.188"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:37.192" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:35.189" endtime="20201111 15:47:37.192"></status>
+</kw>
+<kw name="Typewrite" library="pyautogui">
+<doc>Performs a keyboard key press down, followed by a release, for each of
+the characters in message.</doc>
+<arguments>
+<arg>${VIDEO_JD}</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:37.193" endtime="20201111 15:47:37.430"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:39.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:37.430" endtime="20201111 15:47:39.432"></status>
+</kw>
+<kw name="Press Combination" library="ImageHorizonLibrary">
+<doc>Press given keyboard keys.</doc>
+<arguments>
+<arg>key.enter</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:39.432" endtime="20201111 15:47:39.535"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:49.536" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:39.535" endtime="20201111 15:47:49.536"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:34.986" endtime="20201111 15:47:49.537"></status>
+</kw>
+<kw name="DOB Update" library="PersonalDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:52.541" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:49.538" endtime="20201111 15:47:52.542"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div/input[@class='ant-calendar-picker-input ant-input']</arg>
+</arguments>
+<msg timestamp="20201111 15:47:52.543" level="INFO">Clicking element '//div/input[@class='ant-calendar-picker-input ant-input']'.</msg>
+<status status="PASS" starttime="20201111 15:47:52.543" endtime="20201111 15:47:52.783"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(text(),'17')]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:52.784" level="INFO">Clicking element '//div[contains(text(),'17')]'.</msg>
+<status status="PASS" starttime="20201111 15:47:52.783" endtime="20201111 15:47:52.951"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:49.537" endtime="20201111 15:47:52.951"></status>
+</kw>
+<kw name="Current Location" library="PersonalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:52.952" endtime="20201111 15:47:53.032"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]</arg>
+<arg>Dibang Valley, Arunachal Pradesh</arg>
+</arguments>
+<msg timestamp="20201111 15:47:53.032" level="INFO">Typing text 'Dibang Valley, Arunachal Pradesh' into text field '//div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:53.032" endtime="20201111 15:47:54.903"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:52.951" endtime="20201111 15:47:54.903"></status>
+</kw>
+<kw name="Nationality" library="PersonalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:54.904" endtime="20201111 15:47:54.971"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]</arg>
+<arg>UK, British</arg>
+</arguments>
+<msg timestamp="20201111 15:47:54.973" level="INFO">Typing text 'UK, British' into text field '//div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20201111 15:47:54.972" endtime="20201111 15:47:55.548"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:54.903" endtime="20201111 15:47:55.548"></status>
+</kw>
+<kw name="Contact Number" library="PersonalDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20201111 15:47:58.550" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201111 15:47:55.549" endtime="20201111 15:47:58.550"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//label[contains(text(),'Contact Number')]</arg>
+</arguments>
+<msg timestamp="20201111 15:47:58.578" level="INFO">Current page contains element '//label[contains(text(),'Contact Number')]'.</msg>
+<status status="PASS" starttime="20201111 15:47:58.550" endtime="20201111 15:47:58.579"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#contactNo</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:58.579" endtime="20201111 15:47:58.696"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=#contactNo</arg>
+<arg>9975568427</arg>
+</arguments>
+<msg timestamp="20201111 15:47:58.697" level="INFO">Typing text '9975568427' into text field 'css=#contactNo'.</msg>
+<status status="PASS" starttime="20201111 15:47:58.697" endtime="20201111 15:47:59.153"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:55.549" endtime="20201111 15:47:59.154"></status>
+</kw>
+<kw name="Linkedin URL" library="PersonalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='linkedin']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:59.157" endtime="20201111 15:47:59.281"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='linkedin']</arg>
+<arg>www.linkedin.com/in/schaggar</arg>
+</arguments>
+<msg timestamp="20201111 15:47:59.282" level="INFO">Typing text 'www.linkedin.com/in/schaggar' into text field 'xpath=//input[@id='linkedin']'.</msg>
+<status status="PASS" starttime="20201111 15:47:59.281" endtime="20201111 15:47:59.752"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:59.155" endtime="20201111 15:47:59.753"></status>
+</kw>
+<kw name="GIT URL" library="PersonalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='github']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:47:59.754" endtime="20201111 15:47:59.825"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='github']</arg>
+<arg>https://github.com/schaggar</arg>
+</arguments>
+<msg timestamp="20201111 15:47:59.826" level="INFO">Typing text 'https://github.com/schaggar' into text field 'xpath=//input[@id='github']'.</msg>
+<status status="PASS" starttime="20201111 15:47:59.826" endtime="20201111 15:48:00.353"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:59.754" endtime="20201111 15:48:00.353"></status>
+</kw>
+<kw name="NextPage" library="PersonalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@class='steps-action']//button[@class='ant-btn ant-btn-primary']</arg>
+</arguments>
+<msg timestamp="20201111 15:48:00.355" level="INFO">Clicking element 'xpath=//div[@class='steps-action']//button[@class='ant-btn ant-btn-primary']'.</msg>
+<status status="PASS" starttime="20201111 15:48:00.354" endtime="20201111 15:48:00.469"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:00.354" endtime="20201111 15:48:00.470"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:47:02.556" endtime="20201111 15:48:00.470"></status>
+</kw>
+<kw name="Update Educational Details" library="JobseekerApp">
+<kw name="Validate PageObjects" library="EducationalDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.473" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:00.472" endtime="20201111 15:48:02.474"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[contains(text(),'Education Details')]</arg>
+<arg>Education Details</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.475" level="INFO">Verifying element '//div[contains(text(),'Education Details')]' contains exact text 'Education Details'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.474" endtime="20201111 15:48:02.530"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Highest Qualification')]</arg>
+<arg>Highest Qualification</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.531" level="INFO">Verifying element '//label[contains(text(),'Highest Qualification')]' contains exact text 'Highest Qualification'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.531" endtime="20201111 15:48:02.580"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Degree')]</arg>
+<arg>Degree</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.580" level="INFO">Verifying element '//label[contains(text(),'Degree')]' contains exact text 'Degree'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.580" endtime="20201111 15:48:02.633"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Specialization')]</arg>
+<arg>Specialization</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.634" level="INFO">Verifying element '//label[contains(text(),'Specialization')]' contains exact text 'Specialization'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.633" endtime="20201111 15:48:02.684"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Institute')]</arg>
+<arg>Institute</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.685" level="INFO">Verifying element '//label[contains(text(),'Institute')]' contains exact text 'Institute'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.684" endtime="20201111 15:48:02.736"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Education Type')]</arg>
+<arg>Education Type</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.737" level="INFO">Verifying element '//label[contains(text(),'Education Type')]' contains exact text 'Education Type'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.736" endtime="20201111 15:48:02.787"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Passing Year and Month')]</arg>
+<arg>Passing Year and Month</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.788" level="INFO">Verifying element '//label[contains(text(),'Passing Year and Month')]' contains exact text 'Passing Year and Month'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.788" endtime="20201111 15:48:02.836"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:02.836" level="INFO">Clicking element '//div[2]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:02.836" endtime="20201111 15:48:03.047"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:05.050" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:03.048" endtime="20201111 15:48:05.050"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[7]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:05.051" level="INFO">Clicking element '//div[2]/div[7]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:05.050" endtime="20201111 15:48:05.244"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//button[@class='ant-btn']</arg>
+</arguments>
+<msg timestamp="20201111 15:48:05.273" level="INFO">Current page contains element '//button[@class='ant-btn']'.</msg>
+<status status="PASS" starttime="20201111 15:48:05.246" endtime="20201111 15:48:05.273"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//button[@class='ant-btn ant-btn-primary']/span[contains(text(),'Next')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:05.290" level="INFO">Current page contains element '//button[@class='ant-btn ant-btn-primary']/span[contains(text(),'Next')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:05.273" endtime="20201111 15:48:05.290"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:00.471" endtime="20201111 15:48:05.291"></status>
+</kw>
+<kw name="Highest Qualification" library="EducationalDetails">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Highest Qualification</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:05.291" endtime="20201111 15:48:05.308"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='highestQualification-0']/div[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:05.308" level="INFO">Clicking element 'xpath=//div[@id='highestQualification-0']/div[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:05.308" endtime="20201111 15:48:05.459"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:07.460" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:05.459" endtime="20201111 15:48:07.460"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:05.291" endtime="20201111 15:48:07.460"></status>
+</kw>
+<kw name="Degree" library="EducationalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//li[contains(text(),'Intermediate')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:07.462" level="INFO">Clicking element 'xpath=//li[contains(text(),'Intermediate')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:07.462" endtime="20201111 15:48:07.564"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:07.461" endtime="20201111 15:48:07.565"></status>
+</kw>
+<kw name="Specialization" library="EducationalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[contains(@class,'ant-input ant-select-search__field')]</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:07.567" endtime="20201111 15:48:07.657"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[contains(@class,'ant-input ant-select-search__field')]</arg>
+<arg>Computer Science</arg>
+</arguments>
+<msg timestamp="20201111 15:48:07.657" level="INFO">Typing text 'Computer Science' into text field 'xpath=//input[contains(@class,'ant-input ant-select-search__field')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:07.657" endtime="20201111 15:48:08.133"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:07.566" endtime="20201111 15:48:08.133"></status>
+</kw>
+<kw name="Institute" library="EducationalDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='institute-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:08.133" endtime="20201111 15:48:08.194"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='institute-0']</arg>
+<arg>SSCET</arg>
+</arguments>
+<msg timestamp="20201111 15:48:08.195" level="INFO">Typing text 'SSCET' into text field 'xpath=//input[@id='institute-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:08.195" endtime="20201111 15:48:08.314"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:08.133" endtime="20201111 15:48:08.314"></status>
+</kw>
+<kw name="Education Type" library="EducationalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='educationType-0']//div[contains(@class,'ant-select-selection__rendered')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:08.316" level="INFO">Clicking element 'xpath=//div[@id='educationType-0']//div[contains(@class,'ant-select-selection__rendered')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:08.315" endtime="20201111 15:48:08.393"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:10.394" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:08.393" endtime="20201111 15:48:10.394"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//li[contains(text(),'Full Time')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:10.395" level="INFO">Clicking element '//li[contains(text(),'Full Time')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:10.394" endtime="20201111 15:48:10.504"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:08.314" endtime="20201111 15:48:10.505"></status>
+</kw>
+<kw name="Passing Year and Month" library="EducationalDetails">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[6]/div[2]/div[1]/span[1]/div[1]/span[1]/div[1]/input[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:10.508" level="INFO">Clicking element '//div[6]/div[2]/div[1]/span[1]/div[1]/span[1]/div[1]/input[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:10.507" endtime="20201111 15:48:10.700"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:12.702" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:10.700" endtime="20201111 15:48:12.702"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(text(),'26')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:12.703" level="INFO">Clicking element '//div[contains(text(),'26')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:12.703" endtime="20201111 15:48:12.863"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:10.506" endtime="20201111 15:48:12.864"></status>
+</kw>
+<kw name="NextPage" library="EducationalDetails">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:12.866" level="INFO">Clicking button 'xpath=//div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201111 15:48:12.865" endtime="20201111 15:48:13.070"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:18.072" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:13.071" endtime="20201111 15:48:18.072"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:12.864" endtime="20201111 15:48:18.073"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:00.471" endtime="20201111 15:48:18.073"></status>
+</kw>
+<kw name="Update Employment Details" library="JobseekerApp">
+<kw name="Validate Fresher PageObjects" library="EmploymentDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.078" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:18.076" endtime="20201111 15:48:20.078"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//label[@for='isFresher']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:20.078" endtime="20201111 15:48:20.101"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Are you fresher?')]</arg>
+<arg>Are you fresher?</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.102" level="INFO">Verifying element '//label[contains(text(),'Are you fresher?')]' contains exact text 'Are you fresher?'.</msg>
+<status status="PASS" starttime="20201111 15:48:20.102" endtime="20201111 15:48:20.150"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Achievements')]</arg>
+<arg>Achievements</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.150" level="INFO">Verifying element '//label[contains(text(),'Achievements')]' contains exact text 'Achievements'.</msg>
+<status status="PASS" starttime="20201111 15:48:20.150" endtime="20201111 15:48:20.197"></status>
+</kw>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<arguments>
+<arg>//input[@id='isFresher']</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.242" level="INFO">Current page contains checkbox '//input[@id='isFresher']'.</msg>
+<status status="PASS" starttime="20201111 15:48:20.198" endtime="20201111 15:48:20.242"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:18.075" endtime="20201111 15:48:20.242"></status>
+</kw>
+<kw name="Fresher" library="EmploymentDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id='employmentDescription-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:20.244" endtime="20201111 15:48:20.327"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id='employmentDescription-0']</arg>
+<arg>Robot Framework Testing</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.328" level="INFO">Typing text 'Robot Framework Testing' into text field '//textarea[@id='employmentDescription-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:20.328" endtime="20201111 15:48:20.662"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:20.243" endtime="20201111 15:48:20.663"></status>
+</kw>
+<kw name="NextPage" library="EmploymentDetails">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='steps-action']/button[2]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:20.664" level="INFO">Clicking button '//div[@class='steps-action']/button[2]'.</msg>
+<status status="PASS" starttime="20201111 15:48:20.664" endtime="20201111 15:48:20.759"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:20.663" endtime="20201111 15:48:20.760"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:18.074" endtime="20201111 15:48:20.760"></status>
+</kw>
+<kw name="Update Project Details" library="JobseekerApp">
+<kw name="Validate PageObjects" library="ProjectDetails">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.762" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:20.761" endtime="20201111 15:48:25.762"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Certification Name</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:25.762" endtime="20201111 15:48:25.787"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//div[contains(text(),'Projects Details')]</arg>
+<arg>Projects Details</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.788" level="INFO">Verifying element '//div[contains(text(),'Projects Details')]' contains exact text 'Projects Details'.</msg>
+<status status="PASS" starttime="20201111 15:48:25.788" endtime="20201111 15:48:25.836"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Certification Name')]</arg>
+<arg>Certification Name</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.837" level="INFO">Verifying element '//label[contains(text(),'Certification Name')]' contains exact text 'Certification Name'.</msg>
+<status status="PASS" starttime="20201111 15:48:25.837" endtime="20201111 15:48:25.889"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Certification authority')]</arg>
+<arg>Certification authority</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.890" level="INFO">Verifying element '//label[contains(text(),'Certification authority')]' contains exact text 'Certification authority'.</msg>
+<status status="PASS" starttime="20201111 15:48:25.889" endtime="20201111 15:48:25.937"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Project Title')]</arg>
+<arg>Project Title</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.938" level="INFO">Verifying element '//label[contains(text(),'Project Title')]' contains exact text 'Project Title'.</msg>
+<status status="PASS" starttime="20201111 15:48:25.938" endtime="20201111 15:48:25.986"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Skills Utilized')]</arg>
+<arg>Skills Utilized</arg>
+</arguments>
+<msg timestamp="20201111 15:48:25.987" level="INFO">Verifying element '//label[contains(text(),'Skills Utilized')]' contains exact text 'Skills Utilized'.</msg>
+<status status="PASS" starttime="20201111 15:48:25.987" endtime="20201111 15:48:26.042"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Patent Title')]</arg>
+<arg>Patent Title</arg>
+</arguments>
+<msg timestamp="20201111 15:48:26.043" level="INFO">Verifying element '//label[contains(text(),'Patent Title')]' contains exact text 'Patent Title'.</msg>
+<status status="PASS" starttime="20201111 15:48:26.043" endtime="20201111 15:48:26.099"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//label[contains(text(),'Publication Title')]</arg>
+<arg>Publication Title</arg>
+</arguments>
+<msg timestamp="20201111 15:48:26.100" level="INFO">Verifying element '//label[contains(text(),'Publication Title')]' contains exact text 'Publication Title'.</msg>
+<status status="PASS" starttime="20201111 15:48:26.100" endtime="20201111 15:48:26.154"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:20.761" endtime="20201111 15:48:26.155"></status>
+</kw>
+<kw name="Certification Details" library="ProjectDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='certificationName-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:26.156" endtime="20201111 15:48:26.265"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='certificationName-0']</arg>
+<arg>Microsoft Azure Data Engineer</arg>
+</arguments>
+<msg timestamp="20201111 15:48:26.266" level="INFO">Typing text 'Microsoft Azure Data Engineer' into text field '//input[@id='certificationName-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:26.265" endtime="20201111 15:48:26.635"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='certificationBody-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:26.635" endtime="20201111 15:48:26.707"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='certificationBody-0']</arg>
+<arg>Microsoft</arg>
+</arguments>
+<msg timestamp="20201111 15:48:26.707" level="INFO">Typing text 'Microsoft' into text field '//input[@id='certificationBody-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:26.707" endtime="20201111 15:48:26.869"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:26.870" level="INFO">Clicking button '//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:26.870" endtime="20201111 15:48:27.012"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:29.017" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:27.012" endtime="20201111 15:48:29.017"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:29.018" level="INFO">Clicking button '//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:29.017" endtime="20201111 15:48:29.242"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:26.155" endtime="20201111 15:48:29.243"></status>
+</kw>
+<kw name="Project Details" library="ProjectDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='projectTitle-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:29.245" endtime="20201111 15:48:29.330"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='projectTitle-0']</arg>
+<arg>Automating Jobseeker Portal</arg>
+</arguments>
+<msg timestamp="20201111 15:48:29.331" level="INFO">Typing text 'Automating Jobseeker Portal' into text field '//input[@id='projectTitle-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:29.330" endtime="20201111 15:48:29.696"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:29.243" endtime="20201111 15:48:29.696"></status>
+</kw>
+<kw name="Patent Details" library="ProjectDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='patentTitle-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:29.697" endtime="20201111 15:48:29.780"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='patentTitle-0']</arg>
+<arg>Testing Patent</arg>
+</arguments>
+<msg timestamp="20201111 15:48:29.780" level="INFO">Typing text 'Testing Patent' into text field '//input[@id='patentTitle-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:29.780" endtime="20201111 15:48:29.992"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='patentIssuedAuthority-0']</arg>
+</arguments>
+<msg timestamp="20201111 15:48:29.992" level="INFO">Clicking element '//input[@id='patentIssuedAuthority-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:29.992" endtime="20201111 15:48:30.106"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='patentIssuedAuthority-0']</arg>
+<arg>Issuing Authority Testing</arg>
+</arguments>
+<msg timestamp="20201111 15:48:30.107" level="INFO">Typing text 'Issuing Authority Testing' into text field '//input[@id='patentIssuedAuthority-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:30.107" endtime="20201111 15:48:30.424"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:29.696" endtime="20201111 15:48:30.425"></status>
+</kw>
+<kw name="Publication Details" library="ProjectDetails">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='publicationTitle-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:30.426" endtime="20201111 15:48:30.489"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='publicationTitle-0']</arg>
+<arg>Testing Publication Field</arg>
+</arguments>
+<msg timestamp="20201111 15:48:30.490" level="INFO">Typing text 'Testing Publication Field' into text field '//input[@id='publicationTitle-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:30.489" endtime="20201111 15:48:30.776"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='publicationLink-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:30.777" endtime="20201111 15:48:30.840"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='publicationLink-0']</arg>
+<arg>Publication Link</arg>
+</arguments>
+<msg timestamp="20201111 15:48:30.841" level="INFO">Typing text 'Publication Link' into text field '//input[@id='publicationLink-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:30.840" endtime="20201111 15:48:31.048"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:30.425" endtime="20201111 15:48:31.048"></status>
+</kw>
+<kw name="NextPage" library="ProjectDetails">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@class='steps-action']/button[2]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:31.049" level="INFO">Clicking button '//div[@class='steps-action']/button[2]'.</msg>
+<status status="PASS" starttime="20201111 15:48:31.049" endtime="20201111 15:48:31.147"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:31.048" endtime="20201111 15:48:31.147"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:20.760" endtime="20201111 15:48:31.147"></status>
+</kw>
+<kw name="Update Skills" library="JobseekerApp">
+<kw name="Validate PageObjects" library="UpdateSkills">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:36.152" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:31.150" endtime="20201111 15:48:36.152"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:31.149" endtime="20201111 15:48:36.153"></status>
+</kw>
+<kw name="Skills" library="UpdateSkills">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='skillName-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:36.154" endtime="20201111 15:48:36.267"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='skillName-0']</arg>
+<arg>Cloud Computing</arg>
+</arguments>
+<msg timestamp="20201111 15:48:36.269" level="INFO">Typing text 'Cloud Computing' into text field '//input[@id='skillName-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:36.268" endtime="20201111 15:48:36.524"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:36.524" level="INFO">Clicking element '//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:36.524" endtime="20201111 15:48:36.621"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:36.621" level="INFO">Clicking element '//div[2]/div[1]/div[1]/div[1]/span[1]/button[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:36.621" endtime="20201111 15:48:36.704"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:36.153" endtime="20201111 15:48:36.705"></status>
+</kw>
+<kw name="Languages" library="UpdateSkills">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='language-0']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:36.706" endtime="20201111 15:48:36.779"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='language-0']</arg>
+<arg>Hindi, English, Punjabi</arg>
+</arguments>
+<msg timestamp="20201111 15:48:36.779" level="INFO">Typing text 'Hindi, English, Punjabi' into text field '//input[@id='language-0']'.</msg>
+<status status="PASS" starttime="20201111 15:48:36.779" endtime="20201111 15:48:37.021"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:36.705" endtime="20201111 15:48:37.022"></status>
+</kw>
+<kw name="Bio" library="UpdateSkills">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id='briefBio']</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:37.022" endtime="20201111 15:48:37.077"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//textarea[@id='briefBio']</arg>
+<arg>Testing Bio field.</arg>
+</arguments>
+<msg timestamp="20201111 15:48:37.077" level="INFO">Typing text 'Testing Bio field.' into text field '//textarea[@id='briefBio']'.</msg>
+<status status="PASS" starttime="20201111 15:48:37.077" endtime="20201111 15:48:37.279"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:37.022" endtime="20201111 15:48:37.279"></status>
+</kw>
+<kw name="NextPage" library="UpdateSkills">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[1]/div[1]/section[1]/article[1]/div[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:37.280" level="INFO">Clicking element '//div[1]/div[1]/section[1]/article[1]/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201111 15:48:37.280" endtime="20201111 15:48:37.350"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:37.280" endtime="20201111 15:48:37.350"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:31.148" endtime="20201111 15:48:37.350"></status>
+</kw>
+<kw name="Update Preferences" library="JobseekerApp">
+<kw name="Validate PageObjects" library="UpdatePreferences">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:42.353" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201111 15:48:37.352" endtime="20201111 15:48:42.353"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:37.351" endtime="20201111 15:48:42.354"></status>
+</kw>
+<kw name="Company Size" library="UpdatePreferences">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Company Size</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:42.355" endtime="20201111 15:48:42.379"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[1]/div[1]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:42.380" level="INFO">Clicking element '//div[1]/div[1]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:42.380" endtime="20201111 15:48:42.516"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201111 15:48:43.517" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201111 15:48:42.516" endtime="20201111 15:48:43.517"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//li[contains(text(),'Startups (1-100)')]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:43.518" level="INFO">Clicking element '//li[contains(text(),'Startups (1-100)')]'.</msg>
+<status status="PASS" starttime="20201111 15:48:43.518" endtime="20201111 15:48:43.622"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:42.354" endtime="20201111 15:48:43.623"></status>
+</kw>
+<kw name="Desired CTC" library="UpdatePreferences">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/input[1]</arg>
+</arguments>
+<status status="PASS" starttime="20201111 15:48:43.625" endtime="20201111 15:48:43.729"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/input[1]</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20201111 15:48:43.730" level="INFO">Typing text '10' into text field '//div[2]/div[1]/span[1]/div[1]/div[1]/div[2]/input[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:43.730" endtime="20201111 15:48:43.879"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:43.623" endtime="20201111 15:48:43.880"></status>
+</kw>
+<kw name="Preffered Benefits" library="UpdatePreferences">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//tbody/div[2]/div[3]/span[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:43.881" level="INFO">Clicking element '//tbody/div[2]/div[3]/span[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:43.881" endtime="20201111 15:48:43.973"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//tbody/div[3]/div[2]/span[1]/span[1]/img[1]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:43.974" level="INFO">Clicking element '//tbody/div[3]/div[2]/span[1]/span[1]/img[1]'.</msg>
+<status status="PASS" starttime="20201111 15:48:43.973" endtime="20201111 15:48:44.047"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:43.880" endtime="20201111 15:48:44.047"></status>
+</kw>
+<kw name="NextPage" library="UpdatePreferences">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[1]/section[1]/article[1]/div[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20201111 15:48:44.048" level="INFO">Clicking element '//div[1]/section[1]/article[1]/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20201111 15:48:44.047" endtime="20201111 15:48:44.172"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:44.047" endtime="20201111 15:48:44.173"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:37.351" endtime="20201111 15:48:44.173"></status>
+</kw>
+<kw name="End Web Test" library="CommonApp" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201111 15:48:44.177" endtime="20201111 15:48:47.741"></status>
+</kw>
+<status status="PASS" starttime="20201111 15:48:44.176" endtime="20201111 15:48:47.742"></status>
+</kw>
+<doc>This test will verify if the user is able to login and update the details on the jobseeker portal</doc>
+<tags>
+<tag>Test Case 4: Validate Profile Update Funcationality</tag>
+</tags>
+<status status="PASS" starttime="20201111 15:46:43.135" endtime="20201111 15:48:47.742" critical="yes"></status>
+</test>
+<doc>This is some basic information about the suite</doc>
+<status status="PASS" starttime="20201111 15:45:18.385" endtime="20201111 15:48:47.744"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Test Case 1: Validate JS Landing Page</stat>
+<stat pass="1" fail="0">Test Case 2: Validate JS Login Funcationality</stat>
+<stat pass="1" fail="0">Test Case 3: Validate JS Page Objects</stat>
+<stat pass="1" fail="0">Test Case 4: Validate Profile Update Funcationality</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="Jobseeker">Jobseeker</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
