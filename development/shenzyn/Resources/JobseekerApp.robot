@@ -1,15 +1,17 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    DateTime
-Resource    ../Resources/PO/LandingPage.robot
-Resource    ../Resources/PO/LoginDetails.robot
-Resource    ../Resources/PO/JobseekerPortalObjects.robot
-Resource    ../Resources/PO/PersonalDetails.robot
-Resource    ../Resources/PO/EducationalDetails.robot
-Resource    ../Resources/PO/ProjectDetails.robot
-Resource    ../Resources/PO/EmploymentDetails.robot
-Resource    ../Resources/PO/UpdateSkills.robot
-Resource    ../Resources/PO/UpdatePreferences.robot
+Resource    ../Resources/PO/MainPagePO/LandingPage.robot
+Resource    ../Resources/PO/MainPagePO/LoginDetails.robot
+Resource    ../Resources/PO/MainPagePO/JobseekerPortalObjects.robot
+Resource    ../Resources/PO/UpdateProfilePO/PersonalDetails.robot
+Resource    ../Resources/PO/UpdateProfilePO/EducationalDetails.robot
+Resource    ../Resources/PO/UpdateProfilePO/ProjectDetails.robot
+Resource    ../Resources/PO/UpdateProfilePO/EmploymentDetails.robot
+Resource    ../Resources/PO/UpdateProfilePO/UpdateSkills.robot
+Resource    ../Resources/PO/UpdateProfilePO/UpdatePreferences.robot
+Resource    ../Resources/PO/SavedProfilePO/SavedProfile.robot
+Resource    ../Resources/PO/JobsPO/Jobs.robot
 
 *** Keywords ***
 Verify Landing Page
@@ -35,7 +37,7 @@ Update Profile
     wait until page contains element    //span[contains(text(),'Recommended Jobs')]
     click element    //div[@class='ant-menu-submenu-title']//span//span[@class='nav-text'][contains(text(),'Profile')]
     wait until page contains    Update Profile
-    BuiltIn.sleep    2s
+    BuiltIn.sleep    5s
     click element    //li//li[1]//a[1]
 
 Update Personal Details
@@ -87,5 +89,23 @@ Update Preferences
     UpdatePreferences.Desired CTC
     UpdatePreferences.Preffered Benefits
     UpdatePreferences.NextPage
+
+Saved Profile
+    SavedProfile.Navigate to Saved Profile
+    SavedProfile.Validate PageObjects
+    SavedProfile.Validate Personal Details
+    SavedProfile.Validate Educational Details
+    SavedProfile.Validate Employment Details
+    SavedProfile.Validate Project Details
+    SavedProfile.Validate Skill Details
+#    SavedProfile.Validate Preferences
+
+#The below section is used for job search and application testing
+Navigate to JobMenu
+    Jobs.Navigate to JobSearchMenu
+
+SerachBy Skills
+    Jobs.Search By Skill
+
 
 

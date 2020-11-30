@@ -23,15 +23,18 @@ Highest Qualification
     wait until page contains    Highest Qualification
     click element    xpath=//div[@id='highestQualification-0']/div[1]
     BuiltIn.sleep    2s
-Degree
     click element    xpath=//li[contains(text(),'Intermediate')]
+
+Degree
+    clear element text    //div[1]/ul[1]/li[1]/div[1]/input[1]
+    input text    //div[1]/ul[1]/li[1]/div[1]/input[1]    ${DEGREE}
 
 Specialization
     clear element text    xpath=//input[contains(@class,'ant-input ant-select-search__field')]
-    input text    xpath=//input[contains(@class,'ant-input ant-select-search__field')]  Computer Science
+    input text    xpath=//input[contains(@class,'ant-input ant-select-search__field')]  ${SPECIALIZATION}
 Institute
     clear element text    xpath=//input[@id='institute-0']
-    input text    xpath=//input[@id='institute-0']  SSCET
+    input text    xpath=//input[@id='institute-0']  ${INSTITUTE}
 Education Type
     click element    xpath=//div[@id='educationType-0']//div[contains(@class,'ant-select-selection__rendered')]
     BuiltIn.sleep    2s

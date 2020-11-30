@@ -23,6 +23,7 @@ Validate updates on Profile
     [Tags]    Update Jobseeker Profile
     JobseekerApp.Login to jobseeker portal
     JobseekerApp.Update Profile
+    JobseekerApp.Update Personal Details
     builtin.sleep    5s
 #    click element    xpath=//div[@class='steps-action']//button[@class='ant-btn ant-btn-primary']
 #    builtin.sleep    3s
@@ -35,8 +36,8 @@ Validate updates on Profile
 #    click element    //div[contains(text(),'Skills')]
 #    JobseekerApp.Update Skills
 
-    click element    //div[contains(text(),'Preferences')]
-    JobseekerApp.Update Preferences
+#    click element    //div[contains(text(),'Preferences')]
+#    JobseekerApp.Update Preferences
 
 
 

@@ -31,7 +31,8 @@ Image Upload
     pyautogui.typewrite    ${IMAGE_FILE_PATH}
     BuiltIn.sleep    3s
     ImageHorizonLibrary.Press Combination   Key.enter
-    BuiltIn.sleep    5s
+#    seleniumlibrary.wait until element is visible    //span[contains(text(),'Uploaded successfully.Pass, Female Age Above 18..')]
+#    BuiltIn.sleep    5s
 
 Resume Upload
     click element    //div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]
@@ -56,25 +57,25 @@ DOB Update
 Current Location
 #The below Locator needs to be optimized, will do it later
     clear element text    //div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]
-    input text    //div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    Dibang Valley, Arunachal Pradesh
+    input text    //div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    ${CURRENT_LOCATION}
 
 Nationality
     clear element text    //div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]
-    input text    //div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    UK, British
+    input text    //div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    ${NATIONALITY}
 
 Contact Number
     BuiltIn.sleep   3s
     page should contain element    //label[contains(text(),'Contact Number')]
     clear element text    css=#contactNo
-    input text    css=#contactNo  9975568427
+    input text    css=#contactNo  ${CONTACT_NO}
 
 Linkedin URL
     clear element text    xpath=//input[@id='linkedin']
-    input text    xpath=//input[@id='linkedin']  www.linkedin.com/in/schaggar
+    input text    xpath=//input[@id='linkedin']  ${LINKEDIN}
 
 GIT URL
     clear element text    xpath=//input[@id='github']
-    input text    xpath=//input[@id='github']  https://github.com/schaggar
+    input text    xpath=//input[@id='github']  ${GIT}
 
 NextPage
     click element    xpath=//div[@class='steps-action']//button[@class='ant-btn ant-btn-primary']

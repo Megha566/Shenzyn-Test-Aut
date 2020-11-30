@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This is some basic information about the suite
+Documentation    This test suite will contain the test cases related to jobseeker profile updation
 Resource    ../Resources/JobseekerApp.robot
 Resource    ../Resources/CommonApp.robot
 Test Setup    CommonApp.Begin Web Test
@@ -10,30 +10,48 @@ ${BROWSER} =    chrome
 ${START_URL} =    http://js.stage.shenzyn.com/
 ${LOGIN_ID} =    saravjeet.singh@hotmail.com
 ${LOGIN_PASSWORD} =    s33rat@123
+${BOTTOM_PAGELINK_LINKEDIN} =    https://www.linkedin.com/company/shenzyn/
+${BOTTOM_PAGELINK_FACEBOOK} =    https://www.facebook.com/WeShenzyn/
+${BOTTOM_PAGELINK_TWITTER} =    https://twitter.com/Shenzyn_EW
+${BOTTOM_PAGELINK_INSTAGRAM} =    https://www.instagram.com/we_shenzyn/
+${BOTTOM_PAGELINK_YOUTUBE} =    https://www.youtube.com/channel/UCJ3hSpePirYqXCAJo75OIhQ
+
+#Personal Details
 ${USER_NAME} =    Saravjeet Chaggar
+${EMAIL} =    saravjeet.singh@hotmail.com
 ${IMAGE_FILE_PATH} =    C:\\Users\\Inderjeet\\Desktop\\Saravjeet\\Shenzyn\\static\\download.jpg
 ${RESUME} =    C:\\Users\\Inderjeet\\Desktop\\Saravjeet\\Shenzyn\\static\\saravjeet.doc
 ${VIDEO_JD} =    C:\\Users\\Inderjeet\\Desktop\\Saravjeet\\Shenzyn\\static\\sample-mpg-file.mpg
+${CURRENT_LOCATION} =    Dibang Valley, Arunachal Pradesh
+${NATIONALITY} =    UK, British
+${LINKEDIN} =    www.linkedin.com/in/schaggar
+${GIT} =    https://github.com/schaggar
+${CONTACT_NO} =    9975568427
+
+#Educational Details
+${DEGREE} =    Computer Science
+${SPECIALIZATION} =    Computer Science
+${INSTITUTE} =    SSCET
 
 *** Test Cases ***
-Validate landing page
+TC1: Validate Landing Page
     [Documentation]    This test will verify if the objects or links present and working on the jobseeker landing page
     [Tags]    Test Case 1: Validate JS Landing Page
     JobseekerApp.Verify Landing Page
 
 #User should be able to login and navigate and update details under jobseeker portal
-Validate Login Functionality
+TC2: Validate Login Functionality
     [Documentation]    This test will verify if the user is able to login to the Jobseeker portal
     [Tags]    Test Case 2: Validate JS Login Funcationality
     JobseekerApp.Login to jobseeker portal
 
-Validate JobSeekerPage
+TC3: Validate JobSeekerPage
     [Documentation]    This test will verify if all the objects are present on the jobseeker portal
     [Tags]    Test Case 3: Validate JS Page Objects
     JobseekerApp.Login to jobseeker portal
     JobseekerApp.Validate JSPageObjects
 
-Validate updates on Profile
+TC4: Validate Updates on Profile
     [Documentation]    This test will verify if the user is able to login and update the details on the jobseeker portal
     [Tags]    Test Case 4: Validate Profile Update Funcationality
     JobseekerApp.Login to jobseeker portal
@@ -45,7 +63,18 @@ Validate updates on Profile
     JobseekerApp.Update Skills
     JobseekerApp.Update Preferences
 
+TC5: Validate Saved Profile
+    [Documentation]    This test will verify the details under "Saved Profile" page
+    [Tags]    Test Case 5: Validate Saved Profile
+    JobseekerApp.Login to jobseeker portal
+    JobseekerApp.Saved Profile
 
+TC6: Search by Skill and Save job
+    [Documentation]    This test will verify if user is able to search a job and apply
+    [Tags]    Test Case 6: Validate job search by Skills
+    JobseekerApp.Login to jobseeker portal
+    JobseekerApp.Navigate to JobMenu
+    JobseekerApp.SerachBy Skills
 
 
 
