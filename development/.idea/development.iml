@@ -5,6 +5,8 @@
     <orderEntry type="jdk" jdkName="Python 3.8 (vitual_workspace)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="pythonProject" />
+    <orderEntry type="module" module-name="edbank" />
+    <orderEntry type="module" module-name="Shenzyn-Test-Aut" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="pytest" />
