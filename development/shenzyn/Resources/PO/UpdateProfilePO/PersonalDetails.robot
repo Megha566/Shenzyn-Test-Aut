@@ -21,47 +21,59 @@ Validate PageObjects
     element text should be    //label[contains(text(),'Github Profile Url')]    Github Profile Url
     element text should be    //span[contains(text(),'Validate')]      Validate
     element text should be    //p[contains(text(),'Drag or Click to Upload')]    Drag or Click to Upload
-    page should contain element    //div[5]/div[2]/div[1]/span[1]/div[1]/button[@class='ant-btn ant-btn-primary']
+    page should contain element    //div[@class='steps-action']/button
     page should contain element    //section[1]/article[1]/div[3]/button[1]
 
 Image Upload
-    BuiltIn.sleep    2s
+    Wait until page contains element    //div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]    timeout=60s    error=Element not Loaded
     click element    //div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]
-    BuiltIn.sleep    3s
     pyautogui.typewrite    ${IMAGE_FILE_PATH}
-    BuiltIn.sleep    3s
+    BuiltIn.sleep    2s
     ImageHorizonLibrary.Press Combination   Key.enter
 #    seleniumlibrary.wait until element is visible    //span[contains(text(),'Uploaded successfully.Pass, Female Age Above 18..')]
 #    BuiltIn.sleep    5s
 
 Resume Upload
-    click element    //div[1]/div[2]/div[1]/span[1]/span[1]/div[1]/span[1]
-    BuiltIn.sleep    2s
+    WAIT UNTIL PAGE CONTAINS ELEMENT    //p[contains(text(),'Drag or Click to Upload')]    timeout=60s    error=Element not loaded successfully
+    click element    //p[contains(text(),'Drag or Click to Upload')]
     pyautogui.typewrite    ${RESUME}
-    BuiltIn.sleep    3s
+    BuiltIn.sleep    2s
     ImageHorizonLibrary.Press Combination   Key.enter
-    BuiltIn.sleep    5s
+    wait until element is enabled    //span[contains(text(),'saravjeet.doc')]
+    wait until element is visible    //span[contains(text(),'saravjeet.doc')]
+
 Video JD Upload
+    WAIT UNTIL PAGE CONTAINS ELEMENT    //div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/span[1]/button[1]
     click element    //div[2]/div[1]/div[1]/span[1]/span[1]/div[1]/span[1]/button[1]
-    BuiltIn.sleep    2s
+    builtin.sleep    1s
     pyautogui.typewrite    ${VIDEO_JD}
-    BuiltIn.sleep    2s
-    ImageHorizonLibrary.press combination    key.enter
-#    wait for condition
-    BuiltIn.sleep    10s
+    builtin.sleep    2s
+    ImageHorizonLibrary.Press Combination   Key.enter
+    wait until element is enabled    //span[contains(text(),'big_buck_bunny_720p_1mb.mp4')]
+    wait until element is visible    //span[contains(text(),'big_buck_bunny_720p_1mb.mp4')]
+
 DOB Update
     builtin.sleep    3s
     click element    //div/input[@class='ant-calendar-picker-input ant-input']
+    builtin.sleep    1s
+    repeat keyword    15 times    Previous Month
     click element    //div[contains(text(),'17')]
 
+Previous Month
+    click element    //a[@class='ant-calendar-prev-year-btn']
+
+Diversity Inclusion Category
+    click element    (//input[@class='ant-input ant-select-search__field'])[1]
+    builtin.sleep    1s
+    click element    //li[contains(text(),'LGBTQ')]
+
 Current Location
-#The below Locator needs to be optimized, will do it later
-    clear element text    //div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]
-    input text    //div[6]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    ${CURRENT_LOCATION}
+    clear element text    (//input[@class='ant-input ant-select-search__field'])[2]
+    input text    (//input[@class='ant-input ant-select-search__field'])[2]    ${CURRENT_LOCATION}
 
 Nationality
-    clear element text    //div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]
-    input text    //div[7]/div[2]/div[1]/span[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/input[1]    ${NATIONALITY}
+    clear element text    (//input[@class='ant-input ant-select-search__field'])[3]
+    input text    (//input[@class='ant-input ant-select-search__field'])[3]    ${NATIONALITY}
 
 Contact Number
     BuiltIn.sleep   3s
@@ -76,6 +88,9 @@ Linkedin URL
 GIT URL
     clear element text    xpath=//input[@id='github']
     input text    xpath=//input[@id='github']  ${GIT}
+#    wait until element is not visible    //span[contains(text(),'saravjeet.doc')]
+    wait until page contains element    //span[contains(text(),'saravjeet.doc')]
+    wait until page contains element    //span[contains(text(),'big_buck_bunny_720p_1mb.mp4')]
 
 NextPage
     click element    xpath=//div[@class='steps-action']//button[@class='ant-btn ant-btn-primary']

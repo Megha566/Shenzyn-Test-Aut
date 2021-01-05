@@ -26,6 +26,7 @@ Lateral Page Object Validation
     element text should be    //label[contains(text(),'On notice period?')]
     element text should be    //label[contains(text(),'Achievements')]
 
+
 NextPage
     click button    //div[@class='steps-action']/button[2]
 

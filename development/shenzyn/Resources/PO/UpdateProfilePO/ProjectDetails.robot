@@ -15,16 +15,22 @@ Validate PageObjects
     element text should be    //label[contains(text(),'Skills Utilized')]    Skills Utilized
     element text should be    //label[contains(text(),'Patent Title')]    Patent Title
     element text should be    //label[contains(text(),'Publication Title')]    Publication Title
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[1]
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[2]
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[4]
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[5]
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[6]
+#    click element    (//button[@class='ant-btn ant-btn-primary'])[7]
 
 Certification Details
     clear element text    //input[@id='certificationName-0']
     input text    //input[@id='certificationName-0']    Microsoft Azure Data Engineer
     clear element text    //input[@id='certificationBody-0']
     input text    //input[@id='certificationBody-0']    Microsoft
-    #Check if Add More button is working
-    click button    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
-    BuiltIn.sleep    2s
-    click button    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
+#    #Check if Add More button is working
+#    click button    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
+#    BuiltIn.sleep    2s
+#    click button    //div[2]/div[1]/div[1]/div[1]/span[1]/button[1]
 
 Project Details
     #Project Title

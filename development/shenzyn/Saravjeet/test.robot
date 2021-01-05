@@ -63,12 +63,25 @@ User should be able to Create the Account
 #    clear element text    //input[@id='institute-0']
 #    input text    //input[@id='institute-0']    SSCET
 #    click element    (//button[contains(text(),'')])[3]
-    click element     ${locator}
-#    Input Text    ${locator}    ${Yeterday_Date}
 
-    execute javascript    document.querySelector("${locator}").removeAttribute("readonly");
-    execute javascript    document.querySelector("${locator}").removeAttribute("onchange");
-    execute javascript    document.querySelector("${locator}").setAttribute("value", "${Yeterday_Date}");
+#----dATE PICKER CODE
+#    click element     ${locator}
+##    Input Text    ${locator}    ${Yeterday_Date}
+#
+#    execute javascript    document.querySelector("${locator}").removeAttribute("readonly");
+#    execute javascript    document.querySelector("${locator}").removeAttribute("onchange");
+#    execute javascript    document.querySelector("${locator}").setAttribute("value", "${Yeterday_Date}");
+
+    builtin.sleep    2s
+    click element    //div[contains(text(),'Employment Details')]
+    click element    (//input[@placeholder='Select date'])[1]
+    builtin.sleep    1s
+    repeat keyword    10 times    Previous Month Employment
+    builtin.sleep    1s
+    click element    //div[contains(text(),'20')]
+
 *** Keywords ***
+Previous Month Employment
+    click element    //a[@class='ant-calendar-prev-year-btn']
 
 

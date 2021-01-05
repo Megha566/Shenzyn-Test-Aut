@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    ReactLibrary
 
 *** Keywords ***
 Begin Web Test
