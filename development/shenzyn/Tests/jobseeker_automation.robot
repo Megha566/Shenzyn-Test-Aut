@@ -36,11 +36,11 @@ ${SPECIALIZATION} =    Computer Science
 ${INSTITUTE} =    SSCET
 
 *** Test Cases ***
-#TC1: Validate Landing Page
-#    [Documentation]    This test will verify if the objects or links present and working on the jobseeker landing page
-#    [Tags]    01 Test Case: Validate JS Landing Page
-#    JobseekerApp.Verify Landing Page
-#
+TC1: Validate Landing Page
+    [Documentation]    This test will verify if the objects or links present and working on the jobseeker landing page
+    [Tags]    01 Test Case: Validate JS Landing Page
+    JobseekerApp.Verify Landing Page
+
 #TC2: Validate Login Functionality
 #    [Documentation]    This test will verify if the user is able to login to the Jobseeker portal
 #    [Tags]    02 Test Case: Validate JS Login Funcationality
@@ -51,20 +51,20 @@ ${INSTITUTE} =    SSCET
 #    [Tags]    Test Case 3: Validate JS Page Objects
 #    JobseekerApp.Login to jobseeker portal
 #    JobseekerApp.Validate JSPageObjects
-
-TC4: Validate Updates on Profile
-    [Documentation]    This test will verify if the user is able to login and update the details on the jobseeker portal
-    [Tags]    04 Test Case: Validate Profile Update Functionality
-    set selenium speed    1s
-    JobseekerApp.Login to jobseeker portal
-    JobseekerApp.Update Profile
-    JobseekerApp.Update Personal Details
-    JobseekerApp.Update Educational Details
-    JobseekerApp.Update Employment Details
-    JobseekerApp.Update Project Details
-    JobseekerApp.Update Skills
-    JobseekerApp.Update Preferences
-
+#
+#TC4: Validate Updates on Profile
+#    [Documentation]    This test will verify if the user is able to login and update the details on the jobseeker portal
+#    [Tags]    04 Test Case: Validate Profile Update Functionality
+#    set selenium speed    1s
+#    JobseekerApp.Login to jobseeker portal
+#    JobseekerApp.Update Profile
+#    JobseekerApp.Update Personal Details
+#    JobseekerApp.Update Educational Details
+#    JobseekerApp.Update Employment Details
+#    JobseekerApp.Update Project Details
+#    JobseekerApp.Update Skills
+#    JobseekerApp.Update Preferences
+#
 ##TC5: Validate Saved Profile
 ##    [Documentation]    This test will verify the details under "Saved Profile" page
 ##    [Tags]    Test Case 5: Validate Saved Profile
